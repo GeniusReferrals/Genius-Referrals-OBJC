@@ -39,10 +39,10 @@
 		AAF21AF817E3D884D862B6BC /* Bonuses.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF67032544A38535442C9F0 /* Bonuses.m */; };
 		AA4CE12F17632242C08C4DBD /* BonusesForm.h in Headers */ = {isa = PBXBuildFile; fileRef = AADEE9CAEF49EA85535CF715 /* BonusesForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAD4A54CB9FE3E4EB05F9D97 /* BonusesForm.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC1E91D7E94855FBB8AEFC /* BonusesForm.m */; };
-		AABB4D378BD3C015007C539D /* Bonuses1.h in Headers */ = {isa = PBXBuildFile; fileRef = AA861A3080FFACB91228E0D4 /* Bonuses1.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAE2AA64895CE55DF84E98AC /* Bonuses1.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC742A2A451B11A2A1319A4 /* Bonuses1.m */; };
-		AAA4FFBEEFB73D36F5524A4A /* BonusesForm1.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7EC18323B947FE0AFF45AD /* BonusesForm1.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA1931188EE959D03D162248 /* BonusesForm1.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7B2BD48901947C1916F6C4 /* BonusesForm1.m */; };
+		AACC6FABEFBFD95584C3901A /* ForceBonuses.h in Headers */ = {isa = PBXBuildFile; fileRef = AA32F0FE970EBCD96823EA93 /* ForceBonuses.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6092E5E4938323959521BA /* ForceBonuses.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD2B9C061C6E651EC5AAE75 /* ForceBonuses.m */; };
+		AAFA40895C9A63CD0C16DDEE /* ForceBonusesForm.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8C0AD766AD69780A474D93 /* ForceBonusesForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB2DB0C225E003C5A280D42 /* ForceBonusesForm.m in Sources */ = {isa = PBXBuildFile; fileRef = AA034B1F9495C8F4943CD8AD /* ForceBonusesForm.m */; };
 		AAF9DD201D7ECD3238891593 /* RedemptionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC68F5E1E8F81349218FD24 /* RedemptionRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA00A29C19622ACB1E59FA6C /* RedemptionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1B244B4493D72F44CF1EB8 /* RedemptionRequest.m */; };
 		AA915AAF02DDCB010CD3A5CF /* RedemptionRequestForm.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF62E504D9D5C3BFFD0A522 /* RedemptionRequestForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +51,10 @@
 		AA1A88FBEC5C6C31F0984133 /* Referral.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB13DE2D02086579945D7C2 /* Referral.m */; };
 		AAD7F23E20AE12CEEDE41A1F /* ReferralForm.h in Headers */ = {isa = PBXBuildFile; fileRef = AA94C5CB772FF8FD637895BD /* ReferralForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA200E2CC649D68786019931 /* ReferralForm.m in Sources */ = {isa = PBXBuildFile; fileRef = AA63E45EEDFCEF153C17C1E0 /* ReferralForm.m */; };
+		AA70E96A7A20A1DFA5B9A08A /* PaymentMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB4E31CFFF4689D552F7270 /* PaymentMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF74E2EB1EA2D1148A4F84A /* PaymentMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF09AB5AE1931374C26A0B7 /* PaymentMethod.m */; };
+		AA727BC16E4A3194A908D6B0 /* PaymentMethodForm.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9EA40E110B9CDF435B1A07 /* PaymentMethodForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6836FFA0737A53A4F5B09D /* PaymentMethodForm.m in Sources */ = {isa = PBXBuildFile; fileRef = AA93C3675E156A19468C2F33 /* PaymentMethodForm.m */; };
 		AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4AF826B686E34D8C722F89 /* BaseController.m */; };
 		AA431EAF9A55F7EB6CB3A936 /* RootsController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC23CDC2AB48977ED3211AB /* RootsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAC0F26CDF1342B9AB7CB648 /* RootsController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA70DD82B5575DEC9758812 /* RootsController.m */; };
@@ -156,10 +160,10 @@
 		AAF67032544A38535442C9F0 /* Bonuses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bonuses.m; path = Models/Bonuses.m; sourceTree = "<group>"; };
 		AADEE9CAEF49EA85535CF715 /* BonusesForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BonusesForm.h; path = Models/BonusesForm.h; sourceTree = "<group>"; };
 		AAFC1E91D7E94855FBB8AEFC /* BonusesForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BonusesForm.m; path = Models/BonusesForm.m; sourceTree = "<group>"; };
-		AA861A3080FFACB91228E0D4 /* Bonuses1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bonuses1.h; path = Models/Bonuses1.h; sourceTree = "<group>"; };
-		AAC742A2A451B11A2A1319A4 /* Bonuses1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bonuses1.m; path = Models/Bonuses1.m; sourceTree = "<group>"; };
-		AA7EC18323B947FE0AFF45AD /* BonusesForm1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BonusesForm1.h; path = Models/BonusesForm1.h; sourceTree = "<group>"; };
-		AA7B2BD48901947C1916F6C4 /* BonusesForm1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BonusesForm1.m; path = Models/BonusesForm1.m; sourceTree = "<group>"; };
+		AA32F0FE970EBCD96823EA93 /* ForceBonuses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForceBonuses.h; path = Models/ForceBonuses.h; sourceTree = "<group>"; };
+		AAD2B9C061C6E651EC5AAE75 /* ForceBonuses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForceBonuses.m; path = Models/ForceBonuses.m; sourceTree = "<group>"; };
+		AA8C0AD766AD69780A474D93 /* ForceBonusesForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForceBonusesForm.h; path = Models/ForceBonusesForm.h; sourceTree = "<group>"; };
+		AA034B1F9495C8F4943CD8AD /* ForceBonusesForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForceBonusesForm.m; path = Models/ForceBonusesForm.m; sourceTree = "<group>"; };
 		AAC68F5E1E8F81349218FD24 /* RedemptionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedemptionRequest.h; path = Models/RedemptionRequest.h; sourceTree = "<group>"; };
 		AA1B244B4493D72F44CF1EB8 /* RedemptionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedemptionRequest.m; path = Models/RedemptionRequest.m; sourceTree = "<group>"; };
 		AAF62E504D9D5C3BFFD0A522 /* RedemptionRequestForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedemptionRequestForm.h; path = Models/RedemptionRequestForm.h; sourceTree = "<group>"; };
@@ -168,6 +172,10 @@
 		AAB13DE2D02086579945D7C2 /* Referral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Referral.m; path = Models/Referral.m; sourceTree = "<group>"; };
 		AA94C5CB772FF8FD637895BD /* ReferralForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReferralForm.h; path = Models/ReferralForm.h; sourceTree = "<group>"; };
 		AA63E45EEDFCEF153C17C1E0 /* ReferralForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReferralForm.m; path = Models/ReferralForm.m; sourceTree = "<group>"; };
+		AAB4E31CFFF4689D552F7270 /* PaymentMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentMethod.h; path = Models/PaymentMethod.h; sourceTree = "<group>"; };
+		AAF09AB5AE1931374C26A0B7 /* PaymentMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentMethod.m; path = Models/PaymentMethod.m; sourceTree = "<group>"; };
+		AA9EA40E110B9CDF435B1A07 /* PaymentMethodForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentMethodForm.h; path = Models/PaymentMethodForm.h; sourceTree = "<group>"; };
+		AA93C3675E156A19468C2F33 /* PaymentMethodForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentMethodForm.m; path = Models/PaymentMethodForm.m; sourceTree = "<group>"; };
 		AA4AF826B686E34D8C722F89 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controllers/BaseController.m; sourceTree = "<group>"; };
 		AAC23CDC2AB48977ED3211AB /* RootsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootsController.h; path = Controllers/RootsController.h; sourceTree = "<group>"; };
 		AAA70DD82B5575DEC9758812 /* RootsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootsController.m; path = Controllers/RootsController.m; sourceTree = "<group>"; };
@@ -372,10 +380,10 @@
 				AAF67032544A38535442C9F0 /* Bonuses.m */,
 				AADEE9CAEF49EA85535CF715 /* BonusesForm.h */,
 				AAFC1E91D7E94855FBB8AEFC /* BonusesForm.m */,
-				AA861A3080FFACB91228E0D4 /* Bonuses1.h */,
-				AAC742A2A451B11A2A1319A4 /* Bonuses1.m */,
-				AA7EC18323B947FE0AFF45AD /* BonusesForm1.h */,
-				AA7B2BD48901947C1916F6C4 /* BonusesForm1.m */,
+				AA32F0FE970EBCD96823EA93 /* ForceBonuses.h */,
+				AAD2B9C061C6E651EC5AAE75 /* ForceBonuses.m */,
+				AA8C0AD766AD69780A474D93 /* ForceBonusesForm.h */,
+				AA034B1F9495C8F4943CD8AD /* ForceBonusesForm.m */,
 				AAC68F5E1E8F81349218FD24 /* RedemptionRequest.h */,
 				AA1B244B4493D72F44CF1EB8 /* RedemptionRequest.m */,
 				AAF62E504D9D5C3BFFD0A522 /* RedemptionRequestForm.h */,
@@ -384,6 +392,10 @@
 				AAB13DE2D02086579945D7C2 /* Referral.m */,
 				AA94C5CB772FF8FD637895BD /* ReferralForm.h */,
 				AA63E45EEDFCEF153C17C1E0 /* ReferralForm.m */,
+				AAB4E31CFFF4689D552F7270 /* PaymentMethod.h */,
+				AAF09AB5AE1931374C26A0B7 /* PaymentMethod.m */,
+				AA9EA40E110B9CDF435B1A07 /* PaymentMethodForm.h */,
+				AA93C3675E156A19468C2F33 /* PaymentMethodForm.m */,
             );
             name = Models;
             sourceTree = "<group>";
@@ -400,12 +412,14 @@
 		AA9A1CE6E271CDD2CC228A10 /* AdvocatePatchForm.h in Headers */,
 		AA4F7421C9BFB225BDCDFA79 /* Bonuses.h in Headers */,
 		AA4CE12F17632242C08C4DBD /* BonusesForm.h in Headers */,
-		AABB4D378BD3C015007C539D /* Bonuses1.h in Headers */,
-		AAA4FFBEEFB73D36F5524A4A /* BonusesForm1.h in Headers */,
+		AACC6FABEFBFD95584C3901A /* ForceBonuses.h in Headers */,
+		AAFA40895C9A63CD0C16DDEE /* ForceBonusesForm.h in Headers */,
 		AAF9DD201D7ECD3238891593 /* RedemptionRequest.h in Headers */,
 		AA915AAF02DDCB010CD3A5CF /* RedemptionRequestForm.h in Headers */,
 		AADFAEA0DE580263D0C42107 /* Referral.h in Headers */,
 		AAD7F23E20AE12CEEDE41A1F /* ReferralForm.h in Headers */,
+		AA70E96A7A20A1DFA5B9A08A /* PaymentMethod.h in Headers */,
+		AA727BC16E4A3194A908D6B0 /* PaymentMethodForm.h in Headers */,
 		AA431EAF9A55F7EB6CB3A936 /* RootsController.h in Headers */,
 		AA127EE8BEE0E33E889DBE90 /* AuthenticationsController.h in Headers */,
 		AA8FB894EFEB35A8C0457B63 /* AdvocatesController.h in Headers */,
@@ -554,12 +568,14 @@
 				AA74702507548EAC7634F5FE /* AdvocatePatchForm.m in Sources */,
 				AAF21AF817E3D884D862B6BC /* Bonuses.m in Sources */,
 				AAD4A54CB9FE3E4EB05F9D97 /* BonusesForm.m in Sources */,
-				AAE2AA64895CE55DF84E98AC /* Bonuses1.m in Sources */,
-				AA1931188EE959D03D162248 /* BonusesForm1.m in Sources */,
+				AA6092E5E4938323959521BA /* ForceBonuses.m in Sources */,
+				AAB2DB0C225E003C5A280D42 /* ForceBonusesForm.m in Sources */,
 				AA00A29C19622ACB1E59FA6C /* RedemptionRequest.m in Sources */,
 				AAB7875561B0E43CD5B2D135 /* RedemptionRequestForm.m in Sources */,
 				AA1A88FBEC5C6C31F0984133 /* Referral.m in Sources */,
 				AA200E2CC649D68786019931 /* ReferralForm.m in Sources */,
+				AAF74E2EB1EA2D1148A4F84A /* PaymentMethod.m in Sources */,
+				AA6836FFA0737A53A4F5B09D /* PaymentMethodForm.m in Sources */,
 				AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */,
 				AAC0F26CDF1342B9AB7CB648 /* RootsController.m in Sources */,
 				AAC202ECFE82B8A7F443215B /* AuthenticationsController.m in Sources */,

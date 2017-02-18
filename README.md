@@ -128,13 +128,13 @@ function getRootWithCompletionBlock:(CompletedGetRoot) onCompleted()
 Authentications* authentications = [[Authentications alloc]init] ;
 ```
 
-#### <a name="get_authentications_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".authentications.getAuthenticationsWithCompletionBlock") getAuthenticationsWithCompletionBlock
+#### <a name="get_authentication_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".authentications.getAuthenticationWithCompletionBlock") getAuthenticationWithCompletionBlock
 
 > Allow clients to test authentication on Genius Referrals platform.
 
 
 ```objc
-function getAuthenticationsWithCompletionBlock:(CompletedGetAuthentications) onCompleted()
+function getAuthenticationWithCompletionBlock:(CompletedGetAuthentication) onCompleted()
 ```
 
 
@@ -143,7 +143,7 @@ function getAuthenticationsWithCompletionBlock:(CompletedGetAuthentications) onC
 
 ```objc
 
-    [self.authentications getAuthenticationsWithCompletionBlock:  ^(BOOL success, HttpContext* context, id response, NSError* error) { 
+    [self.authentications getAuthenticationWithCompletionBlock:  ^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -366,8 +366,8 @@ function getAdvocatesAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    NSNumber* page = 193;
-    NSNumber* limit = 193;
+    NSNumber* page = 252;
+    NSNumber* limit = 252;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
@@ -411,6 +411,311 @@ function patchAdvocateAsyncWithAccountSlug:(NSString*) accountSlug
                 [APIHelper jsonDeserializeArray: @"nil"] error: nil];
 
     [self.advocates patchAdvocateAsyncWithAccountSlug: accountSlug advocateToken : advocateToken advocatePatchForm : advocatePatchForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_share_links_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getShareLinksAsyncWithAccountSlug") getShareLinksAsyncWithAccountSlug
+
+> Get the advocates share links. These are the links that advocates use to share your services online.  Share links are wrapped per campaign and widget package.
+
+
+```objc
+function getShareLinksAsyncWithAccountSlug:(NSString*) accountSlug
+                advocateToken:(NSString*) advocateToken
+                completionBlock:(CompletedGetShareLinks) onCompleted(accountSlug advocateToken : advocateToken)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* accountSlug = @"account_slug";
+    NSString* advocateToken = @"advocate_token";
+
+    [self.advocates getShareLinksAsyncWithAccountSlug: accountSlug advocateToken : advocateToken  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="put_payment_method_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.putPaymentMethodAsyncWithAccountSlug") putPaymentMethodAsyncWithAccountSlug
+
+> Update a payment method.
+
+
+```objc
+function putPaymentMethodAsyncWithAccountSlug:(NSString*) accountSlug
+                advocateToken:(NSString*) advocateToken
+                advocatePaymentMethodId:(int) advocatePaymentMethodId
+                advocatePaymentMethodForm:(PaymentMethodForm*) advocatePaymentMethodForm
+                completionBlock:(CompletedPutPaymentMethod) onCompleted(accountSlug advocateToken : advocateToken advocatePaymentMethodId : advocatePaymentMethodId advocatePaymentMethodForm : advocatePaymentMethodForm)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The advocate's token |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodId |  ``` Required ```  | The payment method's identifier |
+| advocatePaymentMethodForm |  ``` Required ```  | The body of the request |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* accountSlug = @"account_slug";
+    NSString* advocateToken = @"advocate_token";
+    int advocatePaymentMethodId = 252;
+    PaymentMethodForm* advocatePaymentMethodForm = [[PaymentMethodForm alloc]init];
+
+    [self.advocates putPaymentMethodAsyncWithAccountSlug: accountSlug advocateToken : advocateToken advocatePaymentMethodId : advocatePaymentMethodId advocatePaymentMethodForm : advocatePaymentMethodForm  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_payment_method_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getPaymentMethodAsyncWithAccountSlug") getPaymentMethodAsyncWithAccountSlug
+
+> Get an advocate's payment method
+
+
+```objc
+function getPaymentMethodAsyncWithAccountSlug:(NSString*) accountSlug
+                advocateToken:(NSString*) advocateToken
+                advocatePaymentMethodId:(int) advocatePaymentMethodId
+                completionBlock:(CompletedGetPaymentMethod) onCompleted(accountSlug advocateToken : advocateToken advocatePaymentMethodId : advocatePaymentMethodId)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodId |  ``` Required ```  | The payment method's identifier |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* accountSlug = @"account_slug";
+    NSString* advocateToken = @"advocate_token";
+    int advocatePaymentMethodId = 252;
+
+    [self.advocates getPaymentMethodAsyncWithAccountSlug: accountSlug advocateToken : advocateToken advocatePaymentMethodId : advocatePaymentMethodId  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="post_payment_method_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.postPaymentMethodAsyncWithAccountSlug") postPaymentMethodAsyncWithAccountSlug
+
+> Create a new payment method.
+
+
+```objc
+function postPaymentMethodAsyncWithAccountSlug:(NSString*) accountSlug
+                advocateToken:(NSString*) advocateToken
+                advocatePaymentMethodForm:(PaymentMethodForm*) advocatePaymentMethodForm
+                completionBlock:(CompletedPostPaymentMethod) onCompleted(accountSlug advocateToken : advocateToken advocatePaymentMethodForm : advocatePaymentMethodForm)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodForm |  ``` Required ```  | The body of the request |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* accountSlug = @"account_slug";
+    NSString* advocateToken = @"advocate_token";
+    PaymentMethodForm* advocatePaymentMethodForm = [[PaymentMethodForm alloc]init];
+
+    [self.advocates postPaymentMethodAsyncWithAccountSlug: accountSlug advocateToken : advocateToken advocatePaymentMethodForm : advocatePaymentMethodForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_bonus_redemption_method_async_with_bonuses_redemption_method_slug"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getBonusRedemptionMethodAsyncWithBonusesRedemptionMethodSlug") getBonusRedemptionMethodAsyncWithBonusesRedemptionMethodSlug
+
+> Get bonuses redemption method.
+
+
+```objc
+function getBonusRedemptionMethodAsyncWithBonusesRedemptionMethodSlug:(NSString*) bonusesRedemptionMethodSlug
+                completionBlock:(CompletedGetBonusRedemptionMethod) onCompleted(bonusesRedemptionMethodSlug)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| bonusesRedemptionMethodSlug |  ``` Required ```  | The bonus redemption method's identifier |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* bonusesRedemptionMethodSlug = @"bonuses_redemption_method_slug";
+
+    [self.advocates getBonusRedemptionMethodAsyncWithBonusesRedemptionMethodSlug: bonusesRedemptionMethodSlug  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_bonus_redemption_methods_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getBonusRedemptionMethodsWithCompletionBlock") getBonusRedemptionMethodsWithCompletionBlock
+
+> Get bonuses redemption methods.
+
+
+```objc
+function getBonusRedemptionMethodsWithCompletionBlock:(CompletedGetBonusRedemptionMethods) onCompleted()
+```
+
+
+
+#### Example Usage
+
+```objc
+
+    [self.advocates getBonusRedemptionMethodsWithCompletionBlock:  ^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_currencies_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getCurrenciesWithCompletionBlock") getCurrenciesWithCompletionBlock
+
+> Get currencies.
+
+
+```objc
+function getCurrenciesWithCompletionBlock:(CompletedGetCurrencies) onCompleted()
+```
+
+
+
+#### Example Usage
+
+```objc
+
+    [self.advocates getCurrenciesWithCompletionBlock:  ^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_currency_async_with_code"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getCurrencyAsyncWithCode") getCurrencyAsyncWithCode
+
+> Get a currency.
+
+
+```objc
+function getCurrencyAsyncWithCode:(NSString*) code
+                completionBlock:(CompletedGetCurrency) onCompleted(code)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| code |  ``` Required ```  | The currency's code |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* code = @"code";
+
+    [self.advocates getCurrencyAsyncWithCode: code  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="get_payment_methods_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".advocates.getPaymentMethodsAsyncWithAccountSlug") getPaymentMethodsAsyncWithAccountSlug
+
+> Get the advocate's payment methods.
+
+
+```objc
+function getPaymentMethodsAsyncWithAccountSlug:(NSString*) accountSlug
+                advocateToken:(NSString*) advocateToken
+                page:(NSNumber*) page
+                limit:(NSNumber*) limit
+                filter:(NSString*) filter
+                sort:(NSString*) sort
+                completionBlock:(CompletedGetPaymentMethods) onCompleted(accountSlug advocateToken : advocateToken page : page limit : limit filter : filter sort : sort)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| filter |  ``` Optional ```  | Allowed fields: username, is_active. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
+| sort |  ``` Optional ```  | Allowed fields: username, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort=last_name\|first_name\|-hire_date |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* accountSlug = @"account_slug";
+    NSString* advocateToken = @"advocate_token";
+    NSNumber* page = 252;
+    NSNumber* limit = 252;
+    NSString* filter = @"filter";
+    NSString* sort = @"sort";
+
+    [self.advocates getPaymentMethodsAsyncWithAccountSlug: accountSlug advocateToken : advocateToken page : page limit : limit filter : filter sort : sort  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -474,8 +779,8 @@ function getAccountsAsyncWithPage:(NSNumber*) page
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort=last_name\|first_name\|-hire_date |
 
@@ -487,8 +792,8 @@ function getAccountsAsyncWithPage:(NSNumber*) page
 
 ```objc
     // Parameters for the API call
-    NSNumber* page = 193;
-    NSNumber* limit = 193;
+    NSNumber* page = 252;
+    NSNumber* limit = 252;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
@@ -591,7 +896,7 @@ function getTopAdvocatesAsyncWithAccountSlug:(NSString*) accountSlug
 |-----------|------|-------------|
 | accountSlug |  ``` Optional ```  | The account identifier |
 | campaignSlug |  ``` Optional ```  | The campaign identifier |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10) |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10) |
 | from |  ``` Optional ```  | The datetime were the range of the search starts |
 | to |  ``` Optional ```  | The datetime were the range of the search stops |
 
@@ -605,7 +910,7 @@ function getTopAdvocatesAsyncWithAccountSlug:(NSString*) accountSlug
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
     NSString* campaignSlug = @"campaign_slug";
-    NSNumber* limit = 193;
+    NSNumber* limit = 88;
     NSDate* from = [NSDate date];
     NSDate* to = [NSDate date];
 
@@ -929,16 +1234,16 @@ function deleteReferralAsyncWithAccountSlug:(NSString*) accountSlug
 ```
 
 
-#### <a name="post_referrals_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".referrals.postReferralsAsyncWithAccountSlug") postReferralsAsyncWithAccountSlug
+#### <a name="post_referral_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".referrals.postReferralAsyncWithAccountSlug") postReferralAsyncWithAccountSlug
 
 > Create a new referral.
 
 
 ```objc
-function postReferralsAsyncWithAccountSlug:(NSString*) accountSlug
+function postReferralAsyncWithAccountSlug:(NSString*) accountSlug
                 advocateToken:(NSString*) advocateToken
                 referralForm:(ReferralForm*) referralForm
-                completionBlock:(CompletedPostReferrals) onCompleted(accountSlug advocateToken : advocateToken referralForm : referralForm)
+                completionBlock:(CompletedPostReferral) onCompleted(accountSlug advocateToken : advocateToken referralForm : referralForm)
 ```
 
 #### Parameters
@@ -961,7 +1266,7 @@ function postReferralsAsyncWithAccountSlug:(NSString*) accountSlug
     NSString* advocateToken = @"advocate_token";
     ReferralForm* referralForm = [[ReferralForm alloc]init];
 
-    [self.referrals postReferralsAsyncWithAccountSlug: accountSlug advocateToken : advocateToken referralForm : referralForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+    [self.referrals postReferralAsyncWithAccountSlug: accountSlug advocateToken : advocateToken referralForm : referralForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1029,8 +1334,8 @@ function getReferralsAsyncWithAccountSlug:(NSString*) accountSlug
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
 | advocateToken |  ``` Required ```  | The advocate's token |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: url, referral_origin_slug, created. Use the following delimiters to build your filters params. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1044,8 +1349,8 @@ function getReferralsAsyncWithAccountSlug:(NSString*) accountSlug
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
     NSString* advocateToken = @"advocate_token";
-    NSNumber* page = 193;
-    NSNumber* limit = 193;
+    NSNumber* page = 88;
+    NSNumber* limit = 88;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
@@ -1197,7 +1502,7 @@ function patchRedemptionRequestAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    int redemptionRequestId = 193;
+    int redemptionRequestId = 88;
 
     [self.redemptionRequests patchRedemptionRequestAsyncWithAccountSlug: accountSlug redemptionRequestId : redemptionRequestId  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
        //Add code here
@@ -1282,8 +1587,8 @@ function getRedemptionRequestAsyncWithAccountSlug:(NSString*) accountSlug
 
 ```objc
 function getRedemptionRequestsAsyncWithAccountSlug:(NSString*) accountSlug
-                page:(NSString*) page
-                limit:(NSString*) limit
+                page:(NSNumber*) page
+                limit:(NSNumber*) limit
                 filter:(NSString*) filter
                 sort:(NSString*) sort
                 completionBlock:(CompletedGetRedemptionRequests) onCompleted(accountSlug page : page limit : limit filter : filter sort : sort)
@@ -1294,8 +1599,8 @@ function getRedemptionRequestsAsyncWithAccountSlug:(NSString*) accountSlug
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: redemption_request_id, name, lastname, email, request_status_slug, request_action_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1308,8 +1613,8 @@ function getRedemptionRequestsAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    NSString* page = @"page";
-    NSString* limit = @"limit";
+    NSNumber* page = 88;
+    NSNumber* limit = 88;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
@@ -1347,8 +1652,8 @@ function getBonusesAsyncWithAccountSlug:(NSString*) accountSlug
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name, lastname, email, campaign_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1361,8 +1666,8 @@ function getBonusesAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    NSNumber* page = 29;
-    NSNumber* limit = 29;
+    NSNumber* page = 88;
+    NSNumber* limit = 88;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
@@ -1372,15 +1677,15 @@ function getBonusesAsyncWithAccountSlug:(NSString*) accountSlug
 ```
 
 
-#### <a name="post_bonuses_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.postBonusesAsyncWithAccountSlug") postBonusesAsyncWithAccountSlug
+#### <a name="post_bonus_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.postBonusAsyncWithAccountSlug") postBonusAsyncWithAccountSlug
 
 > Make an attempt to give a bonus for to the advocate's referrer. The system processes the given advocate (referral) and creates a bonus for the advocate's referrer if is needed. All restrictions set on the campaigns for this account will be check out before giving the bonus to the advocate's referrer.
 
 
 ```objc
-function postBonusesAsyncWithAccountSlug:(NSString*) accountSlug
+function postBonusAsyncWithAccountSlug:(NSString*) accountSlug
                 bonusesForm:(BonusesForm*) bonusesForm
-                completionBlock:(CompletedPostBonuses) onCompleted(accountSlug bonusesForm : bonusesForm)
+                completionBlock:(CompletedPostBonus) onCompleted(accountSlug bonusesForm : bonusesForm)
 ```
 
 #### Parameters
@@ -1401,23 +1706,23 @@ function postBonusesAsyncWithAccountSlug:(NSString*) accountSlug
     NSString* accountSlug = @"account_slug";
     BonusesForm* bonusesForm = [[BonusesForm alloc]init];
 
-    [self.bonuses postBonusesAsyncWithAccountSlug: accountSlug bonusesForm : bonusesForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+    [self.bonuses postBonusAsyncWithAccountSlug: accountSlug bonusesForm : bonusesForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-#### <a name="get_bonuses_checkup_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.getBonusesCheckupAsyncWithAccountSlug") getBonusesCheckupAsyncWithAccountSlug
+#### <a name="get_bonus_checkup_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.getBonusCheckupAsyncWithAccountSlug") getBonusCheckupAsyncWithAccountSlug
 
 > Check if there is a bonus to be given to the advocate. Allows the clients to check if there is a bonus to be given, it simulates the behaivor of a POST request to /accounts/{account_slug}/bonuses resource. This resource is idempotent.
 
 
 ```objc
-function getBonusesCheckupAsyncWithAccountSlug:(NSString*) accountSlug
+function getBonusCheckupAsyncWithAccountSlug:(NSString*) accountSlug
                 advocateToken:(NSString*) advocateToken
                 reference:(NSString*) reference
                 paymentAmount:(double) paymentAmount
-                completionBlock:(CompletedGetBonusesCheckup) onCompleted(accountSlug advocateToken : advocateToken reference : reference paymentAmount : paymentAmount)
+                completionBlock:(CompletedGetBonusCheckup) onCompleted(accountSlug advocateToken : advocateToken reference : reference paymentAmount : paymentAmount)
 ```
 
 #### Parameters
@@ -1440,23 +1745,23 @@ function getBonusesCheckupAsyncWithAccountSlug:(NSString*) accountSlug
     NSString* accountSlug = @"account_slug";
     NSString* advocateToken = @"advocate_token";
     NSString* reference = @"reference";
-    double paymentAmount = 29.6419884425783;
+    double paymentAmount = 47.2523227996437;
 
-    [self.bonuses getBonusesCheckupAsyncWithAccountSlug: accountSlug advocateToken : advocateToken reference : reference paymentAmount : paymentAmount  completionBlock:^(BOOL success, HttpContext* context, NSData* response, NSError* error) { 
+    [self.bonuses getBonusCheckupAsyncWithAccountSlug: accountSlug advocateToken : advocateToken reference : reference paymentAmount : paymentAmount  completionBlock:^(BOOL success, HttpContext* context, NSData* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-#### <a name="post_bonuses_force_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.postBonusesForceAsyncWithAccountSlug") postBonusesForceAsyncWithAccountSlug
+#### <a name="post_force_bonus_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.postForceBonusAsyncWithAccountSlug") postForceBonusAsyncWithAccountSlug
 
 > Force the system to give a bonus to an advocate. The system will not take into account the restriccions specified on the campaigns.
 
 
 ```objc
-function postBonusesForceAsyncWithAccountSlug:(NSString*) accountSlug
-                bonusForm:(BonusesForm1*) bonusForm
-                completionBlock:(CompletedPostBonusesForce) onCompleted(accountSlug bonusForm : bonusForm)
+function postForceBonusAsyncWithAccountSlug:(NSString*) accountSlug
+                bonusForm:(ForceBonusesForm*) bonusForm
+                completionBlock:(CompletedPostForceBonus) onCompleted(accountSlug bonusForm : bonusForm)
 ```
 
 #### Parameters
@@ -1475,23 +1780,23 @@ function postBonusesForceAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    BonusesForm1* bonusForm = [[BonusesForm1 alloc]init];
+    ForceBonusesForm* bonusForm = [[ForceBonusesForm alloc]init];
 
-    [self.bonuses postBonusesForceAsyncWithAccountSlug: accountSlug bonusForm : bonusForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+    [self.bonuses postForceBonusAsyncWithAccountSlug: accountSlug bonusForm : bonusForm  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-#### <a name="get_bonuses_trace_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.getBonusesTraceAsyncWithAccountSlug") getBonusesTraceAsyncWithAccountSlug
+#### <a name="get_bonus_trace_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.getBonusTraceAsyncWithAccountSlug") getBonusTraceAsyncWithAccountSlug
 
 > Get a bonus request trace.
 
 
 ```objc
-function getBonusesTraceAsyncWithAccountSlug:(NSString*) accountSlug
+function getBonusTraceAsyncWithAccountSlug:(NSString*) accountSlug
                 traceId:(int) traceId
-                completionBlock:(CompletedGetBonusesTrace) onCompleted(accountSlug traceId : traceId)
+                completionBlock:(CompletedGetBonusTrace) onCompleted(accountSlug traceId : traceId)
 ```
 
 #### Parameters
@@ -1510,9 +1815,9 @@ function getBonusesTraceAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    int traceId = 29;
+    int traceId = 47;
 
-    [self.bonuses getBonusesTraceAsyncWithAccountSlug: accountSlug traceId : traceId  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+    [self.bonuses getBonusTraceAsyncWithAccountSlug: accountSlug traceId : traceId  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1545,7 +1850,7 @@ function deleteBonusAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    int bonusId = 29;
+    int bonusId = 47;
 
     [self.bonuses deleteBonusAsyncWithAccountSlug: accountSlug bonusId : bonusId  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
        //Add code here
@@ -1580,7 +1885,7 @@ function getBonusAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    int bonusId = 29;
+    int bonusId = 47;
 
     [self.bonuses getBonusAsyncWithAccountSlug: accountSlug bonusId : bonusId  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
@@ -1588,18 +1893,18 @@ function getBonusAsyncWithAccountSlug:(NSString*) accountSlug
 ```
 
 
-#### <a name="get_bonuses_traces_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.getBonusesTracesAsyncWithAccountSlug") getBonusesTracesAsyncWithAccountSlug
+#### <a name="get_bonus_traces_async_with_account_slug"></a>![Method: ](https://apidocs.io/img/method.png ".bonuses.getBonusTracesAsyncWithAccountSlug") getBonusTracesAsyncWithAccountSlug
 
 > Get the list of bonuses traces (audit trail). Every time the system tries to give a bonus the an advocate a new trace is created.
 
 
 ```objc
-function getBonusesTracesAsyncWithAccountSlug:(NSString*) accountSlug
+function getBonusTracesAsyncWithAccountSlug:(NSString*) accountSlug
                 page:(NSNumber*) page
                 limit:(NSNumber*) limit
                 filter:(NSString*) filter
                 sort:(NSString*) sort
-                completionBlock:(CompletedGetBonusesTraces) onCompleted(accountSlug page : page limit : limit filter : filter sort : sort)
+                completionBlock:(CompletedGetBonusTraces) onCompleted(accountSlug page : page limit : limit filter : filter sort : sort)
 ```
 
 #### Parameters
@@ -1607,8 +1912,8 @@ function getBonusesTracesAsyncWithAccountSlug:(NSString*) accountSlug
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: reference, result, bonus_amount, advocate_token, advocate_referrer_token, campaign_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1621,12 +1926,12 @@ function getBonusesTracesAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    NSNumber* page = 29;
-    NSNumber* limit = 29;
+    NSNumber* page = 47;
+    NSNumber* limit = 47;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
-    [self.bonuses getBonusesTracesAsyncWithAccountSlug: accountSlug page : page limit : limit filter : filter sort : sort  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
+    [self.bonuses getBonusTracesAsyncWithAccountSlug: accountSlug page : page limit : limit filter : filter sort : sort  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1695,8 +2000,8 @@ function getCampaignsAsyncWithAccountSlug:(NSString*) accountSlug
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name, description, start_date, end_date, is_active (true\|false), created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: campaign_slug, created, start_date, end_date, is_active. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1709,8 +2014,8 @@ function getCampaignsAsyncWithAccountSlug:(NSString*) accountSlug
 ```objc
     // Parameters for the API call
     NSString* accountSlug = @"account_slug";
-    NSNumber* page = 29;
-    NSNumber* limit = 29;
+    NSNumber* page = 47;
+    NSNumber* limit = 47;
     NSString* filter = @"filter";
     NSString* sort = @"sort";
 
